@@ -36,6 +36,19 @@ const students = [
     }
 ];
 
+// separator
+console.log('--------------------------------------');
+
+// students with grades > 70
+
 const highGradeStudents = students.filter(student => student.grades > 70);
 
+console.log('Students with grades > 70');
 console.log(highGradeStudents);
+
+// students with grades > 70 AND id > 120
+
+const highGradeHighIdStdents = highGradeStudents.filter(student => student.id > 120);
+
+console.log('Students with grades > 70 AND id > 120');
+console.log(highGradeHighIdStdents);
