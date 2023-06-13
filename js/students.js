@@ -52,3 +52,10 @@ const highGradeHighIdStdents = highGradeStudents.filter(student => student.id > 
 
 console.log('Students with grades > 70 AND id > 120');
 console.log(highGradeHighIdStdents);
+
+// plates with UPPERCASE names
+
+const plates = students.map(student => student.name.toUpperCase());
+
+console.log('PLATES');
+console.log(plates);
