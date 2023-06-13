@@ -59,3 +59,14 @@ const plates = students.map(student => student.name.toUpperCase());
 
 console.log('PLATES');
 console.log(plates);
+
+
+// why not? print them on html :)
+
+let platesList = '';
+
+plates.forEach(plate => {
+    platesList += `<li>${plate}</li>`;
+});
+
+document.body.innerHTML += `<ul>${platesList}</ul>`;
