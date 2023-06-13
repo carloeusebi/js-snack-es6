@@ -36,4 +36,6 @@ const students = [
     }
 ];
 
-console.log(students);
+const highGradeStudents = students.filter(student => student.grades > 70);
+
+console.log(highGradeStudents);
