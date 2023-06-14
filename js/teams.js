@@ -56,3 +56,8 @@ teams.forEach(team => {
 });
 
 console.log(teams);
+
+const teamsAndFouls = teams.map(({ name, fouls }) => ({ name, fouls }));
+
+console.log(teamsAndFouls);
+
