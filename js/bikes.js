@@ -22,7 +22,7 @@ console.log('--------------------------------------');
  * @returns {object} the object with the lowest value property
  */
 const getLowestValueItem = (array, property) => {
-    return array.reduce((lowest, arr) => arr[property] < lowest[property] ? arr : lowest, array[0]);
+    return array.reduce((lowest, arr) => arr[property] < lowest[property] ? arr : lowest);
 }
 
 const lightestBike = getLowestValueItem(bikes, 'weight');
