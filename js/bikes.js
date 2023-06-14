@@ -15,6 +15,18 @@ const bikes = [
 
 console.log('--------------------------------------');
 
-lighterBike = bikes.reduce((lighter, bike) => bike.weight < lighter.weight ? bike : lighter, bikes[0]);
+/**
+ * Given an array of objects and a property it returns the object with the lowest value in that property
+ * @param {object} array the array of objects to search into
+ * @param {string} property the property to evaluate
+ * @returns {object} the object with the lowest value property
+ */
+const getLowestValueItem = (array, property) => {
+    return array.reduce((lowest, arr) => arr[property] < lowest[property] ? arr : lowest, array[0]);
+}
 
+lighterBike = getLowestValueItem(bikes, 'weight');
+
+console.log('Lighter Bike:');
 console.log(lighterBike);
+
