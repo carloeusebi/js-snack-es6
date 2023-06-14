@@ -61,3 +61,25 @@ const teamsAndFouls = teams.map(({ name, fouls }) => ({ name, fouls }));
 
 console.log(teamsAndFouls);
 
+let teamsTable = teamsAndFouls.reduce((acc, { name, fouls }) => {
+    return acc += `
+        <tr>
+            <td>${name}</td>
+            <td>${fouls}</td>
+        </tr>
+    `;
+}, '')
+
+teamsTable = `
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Fouls</th>
+        </thead>
+        <tbody>
+            ${teamsTable}
+        </tbody>
+    </table>
+`
+
+document.body.innerHTML += teamsTable;
