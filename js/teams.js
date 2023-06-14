@@ -73,8 +73,10 @@ let teamsTable = teamsAndFouls.reduce((acc, { name, fouls }) => {
 teamsTable = `
     <table>
         <thead>
-            <th>Name</th>
-            <th>Fouls</th>
+            <tr>
+                <th>Name</th>
+                <th>Fouls</th>
+            </tr>
         </thead>
         <tbody>
             ${teamsTable}
