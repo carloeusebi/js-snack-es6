@@ -15,10 +15,6 @@ const bikes = [
 
 console.log('--------------------------------------');
 
-let lighterBike = bikes[0];
-
-bikes.forEach(bike => {
-    lighterBike = bike.weight < lighterBike.weight ? bike : lighterBike;
-})
+lighterBike = bikes.reduce((lighter, bike) => bike.weight < lighter.weight ? bike : lighter, bikes[0]);
 
 console.log(lighterBike);
